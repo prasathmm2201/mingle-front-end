@@ -8,7 +8,7 @@ import { AppRoutes } from "../../router/routes";
 import { AlertContext, LocalStoragekeys, TimeDiffBetweenDates, stringAvatar } from "../../constant";
 import { useSocket } from "../../socket";
 import { AiOutlineUsergroupAdd } from "react-icons/ai";
-import { Button, Loader } from "../../components";
+import {  Loader } from "../../components";
 import { VideCallPopUp } from "../../components/videoCallPopup";
 import jwtDecode from "jwt-decode";
 
@@ -149,8 +149,14 @@ export const Chat = () => {
     // console.log(isOnline , 'isOnline')
     return (
         <div style={{ position: "relative" }}>
-            <p className="antialiased m-0 text-xl text-secondary-200 font-regular pt-2 px-2">Conversations</p>
-            <Button text={'Log Out'} onClick={logout}/>
+           <div className="flex items-center justify-between">
+           <p className="antialiased m-0 text-xl text-secondary-200 font-regular pt-2 px-2">Conversations</p>
+           <button 
+                 className="font-bold rounded-md bg-primary-500 text-contract-100 px-3.5 py-2.5 text-xs  w-fit font-fontFamily-bold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500 flex text-center justify-center" 
+                  onClick={logout} disabled={loading}>
+                                        Log Out
+                 </button>
+           </div>
 
             <div className="p-2" >
                 <div className="rounded-md relative bg-contract-100 flex items-center px-2">
