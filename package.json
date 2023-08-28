@@ -9,6 +9,9 @@
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
+  "engines": {
+    "node": ">=16 <17"
+  },
   "dependencies": {
     "@headlessui/react": "^1.7.16",
     "axios": "^1.4.0",
