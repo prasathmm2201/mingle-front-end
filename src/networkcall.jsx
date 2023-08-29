@@ -46,6 +46,8 @@ export const Networkcall = (
       "Content-Type": "application/json",
       Authorization:
         "Bearer " + token,
+        "Access-Control-Allow-Headers" : "Content-Type",
+        "Access-Control-Allow-Origin": "*",
     };
   }
 
@@ -55,7 +57,8 @@ export const Networkcall = (
     data: body,
     headers: newHeader,
     ...otherProps
-  }).catch((error) => {    
+  }).catch((error) => {
+    console.log(error.message , 'error')    
       return Promise.reject(error);
   });
 };

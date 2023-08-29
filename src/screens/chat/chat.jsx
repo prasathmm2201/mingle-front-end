@@ -214,9 +214,13 @@ export const Chat = () => {
                     </div>
             }
 
-            <div style={{ position: "absolute", bottom: "12px", right: "12px", background: "#ff1d4e", borderRadius: "50%", padding: "12px", cursor: "pointer" }} onClick={createGroup}>
+          <div style={{position: "fixed", bottom: "12px" , left:0 , right:0}}>
+         <div className="mx-auto max-w-sm relative flex justify-end">
+         <div style={{  background: "#ff1d4e", borderRadius: "50%", padding: "12px", cursor: "pointer" , width:"fit-content" }} onClick={createGroup}>
                 <AiOutlineUsergroupAdd style={{ fontSize: "2rem", color: "#fff" }} />
             </div>
+         </div>
+          </div>
 
             {
                 isVideoCall?.bool &&

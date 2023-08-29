@@ -26,14 +26,15 @@ export const Welcome = () => {
     }
     const validate = () => {
         let is_validate = true
-        if (!state?.email?.length) {
+        if (state?.email?.length === 0) {
             is_validate = false
         }
         return is_validate
     }
     const goLogin = async () => {
+        console.log(state?.email , 'state?.email')
+
         if (validate()) {
-            console.log(state?.email , 'state?.email')
             setLoading(true)
             await Networkcall({
                 url: `${config?.api_url}/auth/login`,
@@ -41,7 +42,7 @@ export const Welcome = () => {
                 body: {
                     username: state?.email,
                 },
-                isAuthorized:true
+                isAuthorized:false
             }).then((data) => {
                 setLoading(false)
                 localStorage.setItem(LocalStoragekeys?.token, data?.data?.data)
