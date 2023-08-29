@@ -76,7 +76,7 @@ export const Welcome = () => {
     const signUpWithGoogle = async () => {
         window.location.href = 'https://accounts.google.com/o/oauth2/auth?' +
             'client_id=469154705156-2jgt3b6ae00q6g9kesj28rfu4gq8a3nh.apps.googleusercontent.com' +
-            '&redirect_uri=http://localhost:6060/google/callback' +
+            '&redirect_uri=https://mingle-backend.onrender.com/google/callback' +
             '&response_type=code' +
             '&scope=openid%20email%20profile';
     }
