@@ -46,9 +46,8 @@ export const Networkcall = (
       "Content-Type": "application/json",
       Authorization:
         "Bearer " + token,
-        "Access-Control-Allow-Headers" : "Content-Type",
-        "Access-Control-Allow-Origin": "*",
-    };
+        "Access-Control-Allow-Headers" : "Content-Type"
+          };
   }
 
   return Axios({
