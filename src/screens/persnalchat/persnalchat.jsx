@@ -493,7 +493,12 @@ export const ChatPage = () => {
         if (isvideo) {
             const myVideo = document.createElement('video')
             myVideo.muted = true
-            const peer = new Peer();
+const peer = new Peer(undefined, {
+    key: "peerjs",
+    debug: 2,
+    secure:  true , 
+  });
+
 
             peer.on('open', id => {
                 setPeerID(id)
