@@ -1,4 +1,4 @@
-import { LuEdit2 } from "react-icons/lu"
+// import { LuEdit2 } from "react-icons/lu"
 import { useNavigate } from "react-router-dom"
 import {AppRoutes}from '../../router/routes';
 
@@ -7,7 +7,9 @@ export const ProfileView=()=>{
     return(
         <div>
         <div className="w-full relative">
-        <span className="bg-contract-100 p-2 w-11 inline-flex items-baseline justify-center item-center cursor-pointer rounded-md absolute top-2 right-2" onClick={()=>navigate(AppRoutes?.profile_create)}><LuEdit2 style={{ fontSize: "1.2rem", color: "#ff1d4e" }} /></span>
+        <span className="bg-contract-100 p-2 w-11 inline-flex items-baseline justify-center item-center cursor-pointer rounded-md absolute top-2 right-2" onClick={()=>navigate(AppRoutes?.profile_create)}>
+{/*             <LuEdit2 style={{ fontSize: "1.2rem", color: "#ff1d4e" }} /> */}
+        </span>
             <img className="inline-block w-full" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" style={{ height: "16rem", borderBottomLeftRadius: "20px", borderBottomRightRadius: "20px" }} />
         </div>
       <div className="p-2">
